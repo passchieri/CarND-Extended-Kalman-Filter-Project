@@ -44,6 +44,9 @@ private:
   Eigen::MatrixXd R_radar_;
   Eigen::MatrixXd H_laser_;
   Eigen::MatrixXd Hj_;
+  
+  //process noise covariance matrix acceleration noise (sigma^2)
+  float noise_ax, noise_ay;
 };
 
 #endif /* FusionEKF_H_ */
