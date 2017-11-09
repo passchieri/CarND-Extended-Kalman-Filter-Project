@@ -39,12 +39,11 @@ The code has been written with a balance between readability and efficiency. E.g
 I have made the code such, that it is possible to switch between using lidar, radar, or both with 2 (hardcoded) switches in FusionEKF.cpp line 74. Both the initialisation and the update steps are affected by this selection. I have ran the code with all three options to see the effect of the individual sensors and the fusion. Below are the screenshots of the 2 runs with only 1 sensor in use (the fused result is presented already above).
 
 ![radar](Docs/radar.png)
-
-** Radar only simulation **
+<center> **Radar only simulation** </center>
 
 ![lidar](Docs/lidar.png)
 
-** Lidar only simulation **
+**Lidar only simulation**
 
 From this, several things can be observed:
 
