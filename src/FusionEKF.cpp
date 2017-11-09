@@ -34,23 +34,23 @@ FusionEKF::FusionEKF() {
   //measurement covariance matrix - radar
   R_radar_ = MatrixXd(3, 3);
   R_radar_ << 0.09, 0, 0,
-  0, 0.0009, 0,
-  0, 0, 0.09;
+    0, 0.0009, 0,
+    0, 0, 0.09;
   
   VectorXd x_ = VectorXd(4);
   x_.setZero();
   
   MatrixXd P_=Eigen::MatrixXd(4,4);
   P_<<1000,0,0,0,
-  0,1000,0,0,
-  0,0,1000,0,
-  0,0,0,1000;
+    0,1000,0,0,
+    0,0,1000,0,
+    0,0,0,1000;
   
   MatrixXd F_=Eigen::MatrixXd(4,4);
   F_<<1,0,0,0,
-  0,1,0,0,
-  0,0,1,0,
-  0,0,0,1;
+    0,1,0,0,
+    0,0,1,0,
+    0,0,0,1;
   
   
   //process covariance matrix acceleration noise
