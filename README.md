@@ -26,7 +26,13 @@ When run on the first data set in the simulator, the results of the RMSE are. [0
 ## Follows the correct algoritmn
 The code structure was already following the described structure of the preceeding lessons. Nothing has changed to the execution flow.
 
-The algorithm handles the first measurement appropriately to set px and py. If                                                                                                                                                                                                                                                                        
+The algorithm handles the first measurement appropriately to set px and py. vx and vy cannot be determined, neither from the laser, nor from the radar. Therefore, those are left as 0. Initialization code can be found starting at line 80 of FusionEKF.cpp.
+
+Prediction and update is done starting at line 122 and line 152, respectively, of FusionEKF.cpp. For the lidar data, a standard filter is used, while for the radar data the extended kalman filter is used. Code for both updates can be found in kalman_filter.cpp, startin gat line 46 and 68 respectively.
+
+For the extended kalman filter, also h(x) for the radar is required. This is implemented in tools.cpp, line 74.                 
+
+
 Self-Driving Car Engineer Nanodegree Program
 
 In this project you will utilize a kalman filter to estimate the state of a moving object of interest with noisy lidar and radar measurements. Passing the project requires obtaining RMSE values that are lower that the tolerance outlined in the project rubric. 
