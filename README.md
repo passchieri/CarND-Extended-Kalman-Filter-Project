@@ -21,10 +21,12 @@ To get this working on my mac, I had to change the change the version of libuv t
 
 When run on the first data set in the simulator, the results of the RMSE are. [0.1030, 0.0943, 0.4420, 0.5097], which is better than the required maximum values of [.11, .11, 0.52, 0.52]. See screenshot below
 
-![performance](Docs/performance.png)
+![performance](Docs/combined.png)
 
 ## Follows the correct algoritmn
+The code structure was already following the described structure of the preceeding lessons. Nothing has changed to the execution flow.
 
+The algorithm handles the first measurement appropriately to set px and py. If                                                                                                                                                                                                                                                                        
 Self-Driving Car Engineer Nanodegree Program
 
 In this project you will utilize a kalman filter to estimate the state of a moving object of interest with noisy lidar and radar measurements. Passing the project requires obtaining RMSE values that are lower that the tolerance outlined in the project rubric. 
