@@ -1,4 +1,30 @@
-# Extended Kalman Filter Project Starter Code
+# Extended Kalman Filter Project 
+
+Igor Passchier
+igor.passchier@tassinternational.com
+
+## Introduction
+This is the submission of the Extended Kalman Filter Project. The following sections follow the project rubric of the project.
+
+## Compiling
+The code can be build and executed as follows:
+
+1. mkdir build
+2. cd build
+3. cmake ..
+4. make
+5. ./ExtendedKF
+
+To get this working on my mac, I had to change the change the version of libuv to 1.15.0, instead of 1.11. Maybe it is necessary to change this back if compiled on another platform: I have not been able to check this on other environments than my mac with the lastest version of macos, xcode command line tools, and os libraries installed with the brew.
+
+## Accuracy
+
+When run on the first data set in the simulator, the results of the RMSE are. [0.1030, 0.0943, 0.4420, 0.5097], which is better than the required maximum values of [.11, .11, 0.52, 0.52]. See screenshot below
+
+![performance](Docs/performance.png)
+
+## Follows the correct algoritmn
+
 Self-Driving Car Engineer Nanodegree Program
 
 In this project you will utilize a kalman filter to estimate the state of a moving object of interest with noisy lidar and radar measurements. Passing the project requires obtaining RMSE values that are lower that the tolerance outlined in the project rubric. 
